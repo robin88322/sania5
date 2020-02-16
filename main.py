@@ -24,7 +24,7 @@ w = AppWindow()
 w.show()
 
 def input():
-    filename = QFileDialog.getOpenFileName(w, 'Open data file', '.', 'Data file (*.txt *.dat)')[0]
+    filename = QFileDialog.getOpenFileName(w, 'Open data file', '.', 'Data file (*.txt *.csv)')[0]
     w.line_input.setText(filename)
 
 
