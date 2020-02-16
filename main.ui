@@ -25,88 +25,200 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QLineEdit" name="lineEdit_00"/>
+      <widget class="QLineEdit" name="lineEdit_00">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="2" column="4">
-      <widget class="QLineEdit" name="lineEdit_24"/>
+      <widget class="QLineEdit" name="lineEdit_24">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="3" column="3">
-      <widget class="QLineEdit" name="lineEdit_33"/>
+      <widget class="QLineEdit" name="lineEdit_33">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="3" column="6">
-      <widget class="QLineEdit" name="lineEdit_36"/>
+      <widget class="QLineEdit" name="lineEdit_36">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="2" column="5">
-      <widget class="QLineEdit" name="lineEdit_25"/>
+      <widget class="QLineEdit" name="lineEdit_25">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="1" column="6">
-      <widget class="QLineEdit" name="lineEdit_16"/>
+      <widget class="QLineEdit" name="lineEdit_16">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="1" column="5">
-      <widget class="QLineEdit" name="lineEdit_15"/>
+      <widget class="QLineEdit" name="lineEdit_15">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="1" column="4">
-      <widget class="QLineEdit" name="lineEdit_14"/>
+      <widget class="QLineEdit" name="lineEdit_14">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="3" column="5">
-      <widget class="QLineEdit" name="lineEdit_35"/>
+      <widget class="QLineEdit" name="lineEdit_35">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="1" column="2">
-      <widget class="QLineEdit" name="lineEdit_12"/>
+      <widget class="QLineEdit" name="lineEdit_12">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="3" column="4">
-      <widget class="QLineEdit" name="lineEdit_34"/>
+      <widget class="QLineEdit" name="lineEdit_34">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QLineEdit" name="lineEdit_20"/>
+      <widget class="QLineEdit" name="lineEdit_20">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEdit_11"/>
+      <widget class="QLineEdit" name="lineEdit_11">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="1" column="3">
-      <widget class="QLineEdit" name="lineEdit_13"/>
+      <widget class="QLineEdit" name="lineEdit_13">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLineEdit" name="lineEdit_31"/>
+      <widget class="QLineEdit" name="lineEdit_31">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="2" column="3">
-      <widget class="QLineEdit" name="lineEdit_23"/>
+      <widget class="QLineEdit" name="lineEdit_23">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit_21"/>
+      <widget class="QLineEdit" name="lineEdit_21">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="2" column="2">
-      <widget class="QLineEdit" name="lineEdit_22"/>
+      <widget class="QLineEdit" name="lineEdit_22">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="2" column="6">
-      <widget class="QLineEdit" name="lineEdit_26"/>
+      <widget class="QLineEdit" name="lineEdit_26">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="3" column="2">
-      <widget class="QLineEdit" name="lineEdit_32"/>
+      <widget class="QLineEdit" name="lineEdit_32">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="0" column="5">
-      <widget class="QLineEdit" name="lineEdit_05"/>
+      <widget class="QLineEdit" name="lineEdit_05">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QLineEdit" name="lineEdit_30"/>
+      <widget class="QLineEdit" name="lineEdit_30">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QLineEdit" name="lineEdit_10"/>
+      <widget class="QLineEdit" name="lineEdit_10">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QLineEdit" name="lineEdit_02"/>
+      <widget class="QLineEdit" name="lineEdit_02">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="0" column="4">
-      <widget class="QLineEdit" name="lineEdit_04"/>
+      <widget class="QLineEdit" name="lineEdit_04">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit_01"/>
+      <widget class="QLineEdit" name="lineEdit_01">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="0" column="6">
-      <widget class="QLineEdit" name="lineEdit_06"/>
+      <widget class="QLineEdit" name="lineEdit_06">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="0" column="3">
-      <widget class="QLineEdit" name="lineEdit_03"/>
+      <widget class="QLineEdit" name="lineEdit_03">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
