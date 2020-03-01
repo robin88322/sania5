@@ -2,7 +2,6 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from functions import *
 
 def givno(eta_def):
     n = 4
@@ -172,9 +171,9 @@ def givno(eta_def):
 
     res = []
     def classify(eta):
-        Smin, Smax = get_intervals(eta)
+        Smin, Smax = get_intervals(round(eta, 1))
         t_minus, t_plus = etta_huinia[round(eta, 1)]
-        print("eta: ",eta)
+        print("eta: ",round(eta, 1))
         for i in range(n):
             if (Smin[i] < t_minus):
                 print(f"{i} критична херня")
