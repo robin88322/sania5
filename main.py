@@ -35,7 +35,8 @@ def calculate():
     file = w.line_input.text()
     eta_def = w.doubleSpinBox.value()
     res = []
-    res, matrix = givno(file, eta_def)
+    func_type = w.comboBox.currentText()
+    res, matrix = get_results(file, eta_def, func_type)
     w.lineEdit_s1.setText(res[0])
     w.lineEdit_s2.setText(res[1])
     w.lineEdit_s3.setText(res[2])
@@ -74,7 +75,8 @@ def calculate():
 def plot():
     eta_def = w.doubleSpinBox.value()
     file = w.line_input.text()
-    show_plot(file, eta_def)
+    func_type = w.comboBox.currentText()
+    show_plot(file, eta_def,func_type)
     
    # print(file)
  
