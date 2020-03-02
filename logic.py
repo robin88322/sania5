@@ -3,11 +3,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-def givno(eta_def):
+def givno(DATA_FOLDER, eta_def):
     n = 4
     m = 7
-    print("Ura")
-    DATA_FOLDER = 'data/'
 
     mask = np.array(pd.read_csv(DATA_FOLDER+'mask.csv',delimiter=';',header=None))
     alpha_hat_raw = np.array(pd.read_csv(DATA_FOLDER+'alpha_hat.csv',delimiter=';',header=None))
@@ -96,7 +94,6 @@ def givno(eta_def):
 
     
     step = .1
-
     t = 10
     T = np.zeros((n,m),dtype=np.float64)
 
@@ -113,8 +110,9 @@ def givno(eta_def):
                         
         t += step
         
-    step = .1
 
+
+    step = .1
     T1 = np.zeros((n,m),dtype=np.float64)
     T2 = np.zeros((n,m),dtype=np.float64)
     eta_plus = eta_def
@@ -129,10 +127,35 @@ def givno(eta_def):
                     if T2[i,j] == 0 and eta > eta_plus:
                         T2[i,j] = max(t-step,0)
                     if T1[i,j] == 0 and eta > eta_minus:
+                        T1[i,j] = max(t-step,0)                
+        t += step
+
+
+    T1 = np.zeros((n,m),dtype=np.float64)
+    T2 = np.zeros((n,m),dtype=np.float64)
+    eta_plus = eta_def
+    eta_minus = 0.1
+    t=20
+    step = 0.1
+    while t < 100:
+        for i in range(n):
+            for j in range(m):
+                if alpha_hat[i,j] != -1:
+                    eta = get_eta(i,j)
+                    if T2[i,j] == 0 and eta > eta_plus:
+                        T2[i,j] = max(t-step,0)
+                    if T1[i,j] == 0 and eta > eta_minus:
                         T1[i,j] = max(t-step,0)
                         
         t += step
-
+    Smax = []
+    for i in range(n):
+        T22 = T2[i]
+        Smax.append(np.amax(T22[T22 != 0])) 
+    Smin = []
+    for i in range(n):
+      T11 = T1[i]
+      Smin.append(np.amin(T11[T11 != 0]))
 
     etta_huinia = {0.5 : [45, 80 ],
                 0.6 : [40, 69 ],
@@ -140,38 +163,10 @@ def givno(eta_def):
                 0.8 : [15, 69 ],
                 0.9 : [10, 69 ]
                 }
-    def get_intervals(eta_plus):
-        m = 7
-        n = 4
-        T1 = np.zeros((n,m),dtype=np.float64)
-        T2 = np.zeros((n,m),dtype=np.float64)
-        eta_minus = 0.1
-        t=20
-        step = 0.1
-        while t < 100:
-            for i in range(n):
-                for j in range(m):
-                    if alpha_hat[i,j] != -1:
-                        eta = get_eta(i,j)
-                        if T2[i,j] == 0 and eta > eta_plus:
-                            T2[i,j] = max(t-step,0)
-                        if T1[i,j] == 0 and eta > eta_minus:
-                            T1[i,j] = max(t-step,0)
-                            
-            t += step
-        Smax = []
-        for i in range(n):
-            T22 = T2[i]
-            Smax.append(np.amax(T22[T22 != 0])) 
-        Smin = []
-        for i in range(n):
-            T11 = T1[i]
-            Smin.append(np.amin(T11[T11 != 0])) 
-        return Smin,Smax
+
 
     res = []
     def classify(eta):
-        Smin, Smax = get_intervals(round(eta, 1))
         t_minus, t_plus = etta_huinia[round(eta, 1)]
         print("eta: ",round(eta, 1))
         for i in range(n):
@@ -182,22 +177,24 @@ def givno(eta_def):
                 print(f"{i} заебісь херня")
                 res.append(f"{i} заебісь херня")
             else: print(f"{i} середня херня");res.append(f"{i} середня херня")
-        print(res)
+    
 
     classify(eta_def)
-    get_intervals(eta_def)
     #кусок сраного гівна, але я ібав по інакшому
-    return res
+    matrix = []
+    for i in range(n):
+        for j in range(m):
+            if (T2[i][j] < 0.01):
+                matrix.append(" ")
+            else: matrix.append(f"{{{round(T1[i][j], 1)};{round(T2[i][j])}}}")
+    return res, matrix
 
 
 
 
-def show_plot(eta_def):
+def show_plot(DATA_FOLDER, eta_def):
     n = 4
-    m = 7
-    print("Ura")
-    DATA_FOLDER = 'data/'
-
+    m = 7 
     mask = np.array(pd.read_csv(DATA_FOLDER+'mask.csv',delimiter=';',header=None))
     alpha_hat_raw = np.array(pd.read_csv(DATA_FOLDER+'alpha_hat.csv',delimiter=';',header=None))
     It_hat_raw = np.array(pd.read_csv(DATA_FOLDER+'It_hat.csv',delimiter=';',header=None))
